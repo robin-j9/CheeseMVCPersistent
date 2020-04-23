@@ -20,7 +20,7 @@ namespace CheeseMVC.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            IList<Cheese> cheeses = context.Cheeses.Include(c => c.Category).ToList();
+            List<Cheese> cheeses = context.Cheeses.Include(c => c.Category).ToList();
 
             return View(cheeses);
         }
