@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CheeseMVC.ViewModels;
+using System.Collections.Generic;
 
 namespace CheeseMVC.Models
 {
@@ -12,5 +13,11 @@ namespace CheeseMVC.Models
 
         public IList<CheeseMenu> CheeseMenus { get; set; }
 
+        public void Edit(AddCheeseViewModel updatedCheese)
+        {
+            Name = updatedCheese.Name;
+            Description = updatedCheese.Description;
+            CategoryID = updatedCheese.CategoryID;
+        }
     }
 }
